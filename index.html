@@ -4,6 +4,12 @@
 
         <link rel="stylesheet" href="./style.css" />
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
         <script src="./functions.js"></script>
     </head>
     <body>
@@ -26,6 +32,7 @@
             </a>
             </div>
         </div>
+
         <div id='tours'>
             <div class='container'>
             <h2>Where would you like to go?</h2>
@@ -100,7 +107,34 @@
                 <img alt='Carlsbad Caverns, New Mexico' src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/203277/carlsbad-caverns_new-mexico.jpg'>
             </li>
             </ul>
-        </div>
+
+            <!-- My Solution for Challenge 3 -->
+
+            <div class="modal fade" id="doggyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" data-hidden="true">
+                      &times;
+                    </button>
+                    <h4>basic dialog</h4>
+                  </div>
+                  <div class="modal-body">
+                    <img id="doggyimage" src="about:blank">
+                    <div id="doggycontent">
+                      rawr!!!
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">
+                      OK
+                    </button>
+                  </div>
+                </div> <!--  end modal-content-->
+              </div> <!-- end modal-dialog-->
+           </div> <!-- end modal fade -->
+        </div>  <!-- end tour -->
+
         <div class='container' id='pricing'>
             <article>
             <h3>Tier 1</h3>
@@ -129,7 +163,7 @@
 
 
 
-        <!--My Solution -->
+        <!--My Solution for challenge 2-->
 
 
           <article>
@@ -156,7 +190,7 @@
               <span>Learn More</span>
           </a>
           </article>
-          
+
         </div>
 
 

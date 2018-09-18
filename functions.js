@@ -7,11 +7,23 @@ $(document).ready(function(){
         return false;
     });
 
+    // Challenge 3:
     $('#tours li').on('click', function() {
-        $('#location').val($('img', this).attr('alt'));
+
+      // Splash image up top is now also a doggy image.
+      let doggyIndex = $(this).index() + 1; // to get <li> number
+
+      $.ajax({
+        url: "https://9ss7bxey8k.execute-api.ap-southeast-2.amazonaws.com/default/dummy_service",
+        success: function(result) {
+          $('#doggyimage').attr('src', result.Data[doggyIndex].node.frontmatter.cover)
+          $('#doggycontent').html(result.Data[doggyIndex].node.excerpt)
+        }
+      });
+      $('#doggyModal').modal('show');
     });
 
-    // the jQuery slim included in the challenge did not support Ajax functionality. I have changed this to jQuery min.
+    // Challenge 1: the jQuery slim included in the challenge did not support Ajax functionality. I have changed this to jQuery min.
     $.ajax({
       url: 'https://9ss7bxey8k.execute-api.ap-southeast-2.amazonaws.com/default/dummy_service',
       success: function(result) {
