@@ -1,4 +1,4 @@
-/* ================================= 
+/* =================================
   Base Styles
 ==================================== */
 * {
@@ -6,7 +6,7 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
-  
+
   body {
     display: flex;
     flex-direction: column;
@@ -14,23 +14,23 @@
     font-family: 'Lato', sans-serif;
     color: #3a3a3a;
   }
-  
+
   img {
     max-width: 100%;
     height: auto;
     vertical-align: bottom;
   }
-  
+
   a {
     text-decoration: none;
   }
-  
+
   .container {
     margin: 0 auto;
     width: 90%;
     max-width: 1170px;
   }
-  
+
   .button {
     background: none;
     height: 50px;
@@ -40,7 +40,7 @@
     -moz-transition: background 0.4s;
     transition: background 0.4s;
   }
-  
+
   /* ---- Header ---- */
   #main-header {
     background: #fff;
@@ -74,7 +74,7 @@
       font-size: 0.95em;
     }
   }
-  
+
   /* ---- Intro ---- */
   #intro {
     background: #EEEBE4;
@@ -122,7 +122,7 @@
     background: #B79D55;
     color: #fff;
   }
-  
+
   /* ---- Tours ---- */
   #tours {
     padding-top: 4em;
@@ -244,24 +244,28 @@
     position: relative;
     z-index: -1;
   }
-  
+
   /* ---- Pricing ---- */
   #pricing {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
+    flex-wrap: wrap; /* -- my solution --*/
     padding: 4em 0;
   }
   #pricing article {
     background: #edf4f7;
     display: flex;
     flex-direction: column;
-    flex: 1;
-    margin: 0 0.85em 1em;
+    width: 30%; /* -- my solution --*/
+    flex-grow: 1; /* -- my solution --*/
+    margin: 0.85em 0.85em 1em; /* -- my solution: change the margin-top value from 0 to 0.85em --*/
     padding: 1em;
     border-radius: 3px;
   }
+
   #pricing article:last-child {
     margin-bottom: 0;
+
   }
   #pricing article h3 {
     color: #28415E;
@@ -296,12 +300,12 @@
       margin-bottom: 0;
     }
   }
-  
+
   /* ---- Footer ---- */
   #main-footer {
     background: #d9e4ea;
     flex: 1;
     padding: 2em 0;
     text-align: center;
+
   }
-  
